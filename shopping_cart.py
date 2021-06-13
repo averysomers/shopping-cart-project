@@ -54,7 +54,8 @@ while True:
     else:
         selected_ids.append(selected_id)
 
-print("WE HAVE REACHED THE END OF THE LOOP")
+
+print("---------------------------------")
 
 print("Wegman's Brooklyn Grocery Store")
 print("www.wegmans.com")
@@ -63,7 +64,7 @@ print("---------------------------------")
 
 import datetime
 datetime_object = datetime.datetime.now()
-print("Checkout at: ", datetime_object)
+print("Checkout at: ", datetime_object.strftime("%Y-%m-%d %I:%M %p"))
 #need to format this better
 
 print("---------------------------------")
