@@ -78,20 +78,20 @@ for selected_id in selected_ids:
 
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
     matching_product = matching_products[0] 
-    print(matching_product["name"], matching_product["price"])
+    print("...", matching_product["name"], ":", to_usd(matching_product["price"]))
     subtotal = subtotal + matching_product["price"]
 
-print("Subtotal:", subtotal)
+print("Subtotal:", to_usd(subtotal))
 
 ###Calculate the Tax
 
 taxes = subtotal*.0875
 
-print("Tax:", taxes)
+print("Tax:",to_usd(taxes))
 
 total = subtotal + taxes
 
-print("Total:", total)
+print("Total:", to_usd(total))
 
 print("---------------------------------")
 
