@@ -36,26 +36,25 @@ def to_usd(my_price):
     """
     return f"${my_price:,.2f}" #> $12,000.71
 
-#why is this not working?
-
 print("Welcome to the Shopping Cart Program. Please input all item IDs of the product into the system one by one, hitting enter between each item. When you are completed, type 'done' and hit enter")
 
 selected_ids = []
+
+all_ids = []
+
+for product in products:
+    all_ids.append(str(product["id"]))
 
 while True:
     selected_id = input("Please select / scan a valid product id: ")
     if selected_id.upper() == "DONE":
         break
-    #elif selected_id 
+    elif selected_id not in all_ids:
+        print("There is no item with that ID. Would you like to try again?")
     else:
         selected_ids.append(selected_id)
-    print(selected_id)
 
 print("WE HAVE REACHED THE END OF THE LOOP")
-
-#while False:
-    #print("There is no item with that ID. Would you like to try again?")
-#how do i get this to work?
 
 print("Wegman's Brooklyn Grocery Store")
 print("www.wegmans.com")
