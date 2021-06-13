@@ -36,17 +36,9 @@ def to_usd(my_price):
     """
     return f"${my_price:,.2f}" #> $12,000.71
 
+#why is this not working?
 
-# TODO: write some Python code here to produce the desired output
-
-print(products)
-
-
-print(len(products))
-
-
-# 1) capture product ids until we're done
-# (use infinite while loop)
+print("Welcome to the Shopping Cart Program. Please input all item IDs of the product into the system one by one, hitting enter between each item. When you are completed, type 'done' and hit enter")
 
 selected_ids = []
 
@@ -54,20 +46,60 @@ while True:
     selected_id = input("Please select / scan a valid product id: ")
     if selected_id.upper() == "DONE":
         break
+    #elif selected_id 
     else:
         selected_ids.append(selected_id)
     print(selected_id)
 
 print("WE HAVE REACHED THE END OF THE LOOP")
 
+#while False:
+    #print("There is no item with that ID. Would you like to try again?")
+#how do i get this to work?
+
+print("Wegman's Brooklyn Grocery Store")
+print("www.wegmans.com")
+
+print("---------------------------------")
+
+import datetime
+datetime_object = datetime.datetime.now()
+print("Checkout at: ", datetime_object)
+#need to format this better
+
+print("---------------------------------")
+print("Selected Products:")
+
+print("---------------------------------")
+
+subtotal = 0.0
 
 for selected_id in selected_ids:
-  
-    
+
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
- 
     matching_product = matching_products[0] 
     print(matching_product["name"], matching_product["price"])
+    subtotal = subtotal + matching_product["price"]
+
+print("Subtotal:", subtotal)
+
+###Calculate the Tax
+
+taxes = subtotal*.0875
+
+print("Tax:", taxes)
+
+total = subtotal + taxes
+
+print("Total:", total)
+
+print("---------------------------------")
+
+print("Thanks, see you again soon!")
+
+print("---------------------------------")
+
+
 
 
 
