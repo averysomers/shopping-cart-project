@@ -1,6 +1,6 @@
 # Shopping-cart-project
 
-A software that allows you to enter the
+A software that allows you to enter the IDs of grocery store items and gives you a receipt.
 
 ## Prerequisites
 
